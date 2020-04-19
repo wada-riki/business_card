@@ -1,3 +1,11 @@
 <div class="content__title">
-  新規名刺の保存
+  新規名刺の作成
 </div>
+
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :image, placeholder: "Image Url" %> 
+  <%= form.text_field :title, placeholder: "Company" %>
+  <%= form.text_field :title, placeholder: "Name" %>
+  <%= form.text_area :content, placeholder: "The details" %>
+  <%= form.submit 'SAVE' %>
+<% end %>
