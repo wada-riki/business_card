@@ -4,19 +4,16 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
+    Post.create(post_params)
   end
 
-  def show
+  private
+  def post_params
+    params.require(:post).parmit(:title, :content)
   end
-
-  def edit
-  end
-
-  def destroy
-  end
-
   
 end
