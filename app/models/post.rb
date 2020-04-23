@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  validates :
+  # validates :name, :company, presence: true
 end
